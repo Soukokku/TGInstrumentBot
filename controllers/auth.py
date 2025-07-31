@@ -17,9 +17,15 @@ async def start_handler(message: types.Message, state: FSMContext):
     if user:
         role = user.role.name
         if role == "прораб":
+<<<<<<< HEAD
+            await message.answer("Добро пожаловать! Вот доступные функции:", reply_markup=main_keyboard_prorab)
+        elif role == "работник":
+            await message.answer("Добро пожаловать! Вот доступные функции:", reply_markup=main_keyboard_worker)
+=======
             await message.answer("Вы прораб! Показываю кнопки прораба.", reply_markup=main_keyboard_prorab)
         elif role == "работник":
             await message.answer("Вы работник! Показываю кнопки работника.", reply_markup=main_keyboard_worker)
+>>>>>>> 2b43ccfb846ddfd640f886d374a935c1c06660cf
         elif role == "в ожидании":
             await message.answer("Ваша заявка еще рассматривается, пожалуйста, ожидайте.")
         else:
